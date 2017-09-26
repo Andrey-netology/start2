@@ -1,15 +1,24 @@
 <?php
-$x = 'rand (0,100)';
-echo "Число ".$x;
-$x1 = '1';
-$x2 = '1';
+public function func($userNumber, $x = 1, $y = 1)
+    {
+        if ($x > $userNumber){
+            print_r('задуманное число не входит в чис ряд');
+        }else{
 
-    if ($x1 > $x) {
-    echo 'задуманное число НЕ входит в чиловой ряд';
-} elseif ($x1 < $x)
-        if ($x1 = $x){
-        echo 'задуманное число входит в числовой ряд';
+            if ($x != $userNumber){
+                $z = $x;
+                $x += $y;
+                $y = $z;
+                
+                $this->func($userNumber,$x,$y);
+            }else{
+                print_r('входит в числовой ряд');
+
+            }
         }
+        
+    }
+>/?
 
 
 
