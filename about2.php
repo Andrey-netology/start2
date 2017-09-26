@@ -18,7 +18,7 @@ public function func($userNumber, $x = 1, $y = 1)
         }
         
     }
->/?
+?>
 
 
 
