@@ -1,0 +1,10 @@
+<?php
+$continens = array(
+    'africa' => array ('monitor lizard', 'fallow deer', 'least weasel', 'snipe', 'wolf'),
+    'asia' => array ('grass snake', 'grass snake', 'gesco'),
+    'europe' => array ('sheep', 'otter', 'gibbon')
+);
+foreach($continens as $k=>$v){
+    $a[$k] = preg_grep("~\s{1}~",$v);
+}
+print_r($a);
