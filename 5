@@ -1,18 +1,25 @@
 <?php
-$user = round (0,100)
-$x = 1
-$y = 1
+$status = true;
+$x = 1;
+$y = 1;
+$userNumber = round(0.100);
 
-if ($x > $user)
-    echo 'задуманное число Не входит в числовой ряд'
-else
-    if ($x != $user)
-        echo 'задуманное число входит в числовой ряд'
-else
-                $z = $x;
-                $x += $y;
-                $y = $z;
-for ($z = 1, $z < $y, z$++)
-    if (z$ = 1)
-break
+echo "Число ".$userNumber;
+
+while($status) {
+
+    if ($x > $userNumber) {
+        $status = false;
+        print_r('задуманное число не входит в чис ряд');
+    } else {
+        if ($x != $userNumber) {
+            $z = $x;
+            $x += $y;
+            $y = $z;
+        } else {
+            $status = false;
+            print_r('входит в числовой ряд');
+        }
+    }
+}
 ?>
