@@ -1,10 +1,13 @@
 <?php
-$continens = array(
+$countries = [
     'africa' => array ('monitor lizard', 'fallow deer', 'least weasel', 'snipe', 'wolf'),
     'asia' => array ('grass snake', 'grass snake', 'gesco'),
     'europe' => array ('sheep', 'otter', 'gibbon')
-);
-foreach($continens as $k=>$v){
-    $a[$k] = preg_grep("~\s{1}~",$v);
+];
+$result = [];
+foreach ($countries as $animal) {
+    $result = array_merge($result, array_filter($animal, function ($item){ return count(explode(' ', $item)) === 2; }) );
+    shuffle($result);
 }
-print_r($a);
+print_r($result);
+?>
